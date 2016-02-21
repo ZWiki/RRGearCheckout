@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.NewMemberController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="10.0" prefWidth="150.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="318.0" minWidth="0.0" prefWidth="45.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="318.0" minWidth="10.0" prefWidth="202.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="38.0" minHeight="0.0" prefHeight="38.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="74.0" minHeight="74.0" prefHeight="74.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="92.0" minHeight="92.0" prefHeight="92.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="90.0" minHeight="10.0" prefHeight="31.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="180.0" minHeight="0.0" prefHeight="11.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="180.0" minHeight="10.0" prefHeight="155.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="180.0" minHeight="10.0" prefHeight="49.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Label alignment="TOP_CENTER" text="*" textFill="#f23838">
+         <GridPane.margin>
+            <Insets left="5.0" />
+         </GridPane.margin>
+      </Label>
+      <Label text="Indicates required field" GridPane.columnSpan="2147483647">
+         <GridPane.margin>
+            <Insets left="12.0" />
+         </GridPane.margin>
+      </Label>
+      <VBox prefHeight="200.0" prefWidth="100.0" spacing="5.0" GridPane.columnSpan="2147483647" GridPane.rowIndex="1" GridPane.rowSpan="2147483647">
+         <GridPane.margin>
+            <Insets left="5.0" />
+         </GridPane.margin>
+         <children>
+            <HBox prefHeight="22.0" prefWidth="145.0">
+               <children>
+                  <Label minHeight="22.0" text="First Name:" />
+                  <Label minHeight="22.0" style="-fx-text-fill: #f23838;" text="*" />
+               </children>
+            </HBox>
+            <HBox prefHeight="22.0" prefWidth="200.0">
+               <children>
+                  <Label minHeight="22.0" text="Last Name:" />
+                  <Label minHeight="22.0" style="-fx-text-fill: #f23838;" text="*" />
+               </children>
+            </HBox>
+            <HBox prefHeight="22.0" prefWidth="200.0">
+               <children>
+                  <Label minHeight="22.0" text="Email:" />
+                  <Label minHeight="22.0" style="-fx-text-fill: #f23838;" text="*" />
+               </children>
+            </HBox>
+            <HBox prefHeight="22.0" prefWidth="200.0">
+               <children>
+                  <Label minHeight="22.0" text="Password:" />
+                  <Label style="-fx-text-fill: #f23838;" text="*" />
+               </children>
+            </HBox>
+            <HBox prefHeight="22.0" prefWidth="200.0">
+               <children>
+                  <Label minHeight="22.0" text="Reconfirm Password:" />
+                  <Label minHeight="22.0" style="-fx-text-fill: #f23838;" text="*" />
+               </children>
+            </HBox>
+            <Label maxHeight="22.0" minHeight="22.0" text="Phone Number:" />
+            <Label minHeight="22.0" prefWidth="150.0" text="Gender:" />
+            <Label minHeight="22.0" prefWidth="150.0" text="Signed Waiver:" />
+            <Label alignment="BOTTOM_CENTER" maxHeight="22.0" minHeight="22.0" text="Membership:" />
+            <HBox maxHeight="22.0" minHeight="22.0" prefHeight="22.0" prefWidth="200.0">
+               <children>
+                  <Label alignment="CENTER" minHeight="22.0" prefHeight="22.0" text="Spring:" />
+                  <ComboBox prefWidth="75.0" />
+                  <Label maxHeight="22.0" minHeight="22.0" text="Fall:">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <ComboBox prefWidth="75.0" />
+                  <Label maxHeight="22.0" minHeight="22.0" text="Summer:">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <ComboBox prefWidth="75.0" />
+               </children>
+            </HBox>
+            <Button fx:id="fx_btn_submit" mnemonicParsing="false" onAction="#handleSubmitBtnAction" text="Submit" />
+         </children>
+      </VBox>
+      <VBox prefHeight="200.0" prefWidth="100.0" spacing="5.0" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.rowIndex="1" GridPane.rowSpan="2147483647">
+         <GridPane.margin>
+            <Insets left="5.0" />
+         </GridPane.margin>
+         <children>
+            <TextField fx:id="fx_tf_first_name" maxHeight="22.0" minHeight="22.0" prefHeight="22.0">
+               <VBox.margin>
+                  <Insets right="40.0" />
+               </VBox.margin></TextField>
+            <TextField fx:id="fx_tf_last_name" maxHeight="22.0" minHeight="22.0" prefHeight="22.0">
+               <VBox.margin>
+                  <Insets right="40.0" />
+               </VBox.margin></TextField>
+            <TextField fx:id="fx_tf_email" maxHeight="22.0" minHeight="22.0">
+               <VBox.margin>
+                  <Insets right="40.0" />
+               </VBox.margin></TextField>
+            <PasswordField fx:id="fx_pf_password" maxHeight="22.0" minHeight="22.0">
+               <VBox.margin>
+                  <Insets right="40.0" />
+               </VBox.margin></PasswordField>
+            <HBox maxHeight="22.0" minWidth="22.0" prefHeight="100.0" prefWidth="200.0" spacing="5.0">
+               <children>
+                  <PasswordField fx:id="fx_pf_reconfirm_password" maxHeight="22.0" minHeight="22.0" minWidth="206.0" prefHeight="22.0" prefWidth="206.0">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin></PasswordField>
+                  <Pane fx:id="fx_p_check" prefHeight="200.0" prefWidth="200.0" />
+               </children>
+            </HBox>
+            <HBox maxHeight="22.0" prefHeight="22.0" prefWidth="200.0">
+               <children>
+                  <TextField maxWidth="206.0" minWidth="206.0" prefHeight="25.0" prefWidth="206.0">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin></TextField>
+               </children>
+               <VBox.margin>
+                  <Insets right="40.0" />
+               </VBox.margin>
+            </HBox>
+            <ComboBox maxHeight="22.0" minHeight="22.0" prefWidth="100.0" />
+            <ComboBox maxHeight="22.0" minHeight="22.0" prefWidth="100.0" />
+         </children>
+      </VBox>
+   </children>
+</GridPane>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane fx:id="fx_tf_password" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="230.0" prefWidth="350.0" stylesheets="@login.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.LoginController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="300.0" minWidth="10.0" prefWidth="300.0" />
+  </columnConstraints>
+  <rowConstraints>
+      <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="20.0" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="35.0" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="35.0" minHeight="5.0" prefHeight="35.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="57.0" minHeight="5.0" prefHeight="33.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="70.0" minHeight="10.0" prefHeight="21.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="20.0" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="20.0" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+         <children>
+            <Button fx:id="fx_btn_login" mnemonicParsing="false" onMouseClicked="#handleLoginBtnClicked" text="Login">
+               <HBox.margin>
+                  <Insets right="40.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </HBox>
+      <Label alignment="CENTER_RIGHT" prefHeight="15.0" prefWidth="100.0" text="Username: " GridPane.rowIndex="3" />
+      <Label alignment="CENTER_RIGHT" prefHeight="15.0" prefWidth="100.0" text="Password: " GridPane.rowIndex="4" />
+      <Label alignment="CENTER" prefHeight="21.0" prefWidth="378.0" text="Login using Ridge Roamers" GridPane.columnSpan="2147483647">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" prefWidth="350.0" text="username and password" GridPane.columnSpan="2147483647" GridPane.rowIndex="1">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label text="If you do not have a username yet, you can create one " GridPane.columnSpan="2147483647" GridPane.rowIndex="7">
+         <font>
+            <Font size="9.0" />
+         </font>
+      </Label>
+      <Hyperlink onMouseClicked="#handleCreateAccountHyperLink" prefHeight="13.0" prefWidth="35.0" style="-fx-border-style: none; -fx-border-color: transparent;" text="here!" GridPane.columnIndex="1" GridPane.rowIndex="7">
+         <font>
+            <Font size="9.0" />
+         </font>
+         <GridPane.margin>
+            <Insets left="147.0" />
+         </GridPane.margin>
+      </Hyperlink>
+      <TextField fx:id="fx_tf_username" GridPane.columnIndex="1" GridPane.rowIndex="3">
+         <GridPane.margin>
+            <Insets right="30.0" />
+         </GridPane.margin>
+      </TextField>
+      <PasswordField fx:id="fx_pf_password" GridPane.columnIndex="1" GridPane.rowIndex="4">
+         <GridPane.margin>
+            <Insets right="30.0" />
+         </GridPane.margin>
+      </PasswordField>
+      <Label text="Blah blah blah" GridPane.rowIndex="8">
+         <font>
+            <Font size="9.0" />
+         </font>
+      </Label>
+   </children>
+</GridPane>
