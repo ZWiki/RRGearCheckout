@@ -1,10 +1,11 @@
 package application;
 
-import java.io.BufferedInputStream;
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.lang.reflect.Method;
+import java.lang.reflect.Parameter;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -23,6 +24,17 @@ public class RidgeRoamersAPI {
 	public static final String ACCEPT_LANGUAGE = "en-US,en;q=0.8";
 	public static final String USER_AGENT = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.109 Safari/537.36";
 	public static final String ENCODING = "UTF-8";
+	
+	private static final HashMap<String, Object> add_climber = new HashMap<String, Object>() {
+		{
+			put("gender", "NONE");
+			put("email", null);
+			put("signed_waiver", null);
+			put("spring_membership", "F"); put("fall_membership", "F"); put("summer_membership", "F");
+			put("certified", "F"); put("phone_number", null); put("cert_officer", "F");
+			put("parent_first_name", null); put("parent_last_name", null);
+		}
+	};
 	
 	
 	public static String basicRequest(String method, HashMap<String, Object> data) {
@@ -81,5 +93,34 @@ public class RidgeRoamersAPI {
 	
 	public static String basicRequest(String method) {
 		return basicRequest(method, null);
+	}
+	
+	public static String add_climber(String first_name, String last_name, char[] password) {
+		StackTraceElement[] ele = Thread.currentThread().getStackTrace();
+		String methodName = ele[1].getMethodName();
+		try {
+			Method m = null;
+			for (Method method: RidgeRoamersAPI.class.getMethods()) {
+				if (method.getName().equals(methodName)) {
+					m = method;
+					break;
+				}
+			}
+			if (m == null) {
+				throw new NullPointerException("Unable to locate method '" + methodName + "'");
+			} else {
+				for (Parameter p : m.getParameters()) {
+					System.out.println(p.getName());
+				}
+			}
+		} catch (SecurityException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
+	private static void basicReflectCall(String methodName) {
+		
 	}
 }

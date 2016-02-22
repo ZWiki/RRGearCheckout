@@ -28,6 +28,7 @@ public class Main extends Application {
 	}
 	
 	public static void main(String[] args) {
-		launch(args);
+		RidgeRoamersAPI.add_climber(null, null, null);
+//		launch(args);
 	}
 }
