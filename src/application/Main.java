@@ -28,7 +28,9 @@ public class Main extends Application {
 	}
 	
 	public static void main(String[] args) {
-		RidgeRoamersAPI.add_climber(null, null, null);
-//		launch(args);
+//		RidgeRoamersAPI.add_climber(null, null, null);
+//		System.out.println(RidgeRoamersAPI.basicRequest("get_co_list"));
+//		System.out.println(RidgeRoamersAPI.view_available_items());
+		launch(args);
 	}
 }

@@ -38,12 +38,13 @@ public class NewMemberController implements Initializable{
 	
 	@FXML
 	protected void handleSubmitBtnAction() {
+		String firstName = fx_tf_first_name.getText();
+		String lastName = fx_tf_last_name.getText();
+		String password = fx_pf_password.getText();
 		HashMap<String, Object> data = new HashMap<String, Object>();
-		data.put("first_name", fx_tf_first_name.getText());
-		data.put("last_name", fx_tf_last_name.getText());
 		data.put("email", fx_tf_email.getText());
-		data.put("password", fx_pf_password.getText());
-		System.out.println(RidgeRoamersAPI.basicRequest("add_climber", data));
+		String response = RidgeRoamersAPI.add_climber(firstName, lastName, password, data);
+		System.out.println(response);
 	}
 	
 	@Override
